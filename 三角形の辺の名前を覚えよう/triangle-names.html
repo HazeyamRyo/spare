@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/sanitize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>三角比の辺の名前を覚えよう</title>
+</head>
+<body>
+    <div class="container hidden">
+        <div class="question-container">
+            <li class="header">
+                <ul class="score">
+                    <div id="scoreText">問題番号</div>
+                    <div id="score"></div>
+                </ul>
+                <ul class="difficulty">
+                    <div id="difficultyText">難易度</div>
+                    <div id="difficulty"></div>
+                </ul>
+                <ul class="goal">
+                    <p class="goal-title">目標</p> 
+                    <p class="goal-text">三角形の辺の名前を覚えよう</p>
+                </ul>
+                <ul class="timer">
+                    <div id="timerText">time</div>
+                    <div id="timer">0.0秒</div>
+                </ul>
+            </li>
+            <div class="questionText">
+                <div id="questionText"></div>
+                <div id="questionHint"></div>
+                <div id="result" class="visibility-hidden"></div>
+            </div>  
+            <div id="choices" class="choices">
+                <div id="choicesButtons"></div>
+            </div>
+        </div>   
+        <div class="hint-container">
+            <button id="hintButton">
+                <div>ヒント表示/非表示</div>
+            </button>
+            <p id="hintExplain">三角比の定義を確認できます。</p>
+            <div id="hint" class="hidden">
+                <div>
+                    <p class="hintTitle">三角比の定義</p>
+                    <img id="hintImage" src="./assets/img/ヒント/fft23.jpg" alt="三角形の辺の名前">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="setting">
+            <h1>三角比の辺の名前を覚えよう</h1>
+            <div id="numberOfQuestionsContainer">
+                <label for="scoreInput">問題数を設定:</label>
+                <input type="number" id="numberOfQuestionsInput" min="0" value="0">
+            </div>
+            <div id="timeAttackInfo" class="hidden">
+                タイムアタックモードの問題数は5問です。
+            </div>
+            <div>
+                <label for="scoreInput">難易度を設定:</label>
+                <input type="radio" id="difficultyInput" name="difficulty" value="normal" checked>normal
+                <input type="radio" id="difficultyInput" name="difficulty" value="hard">hard
+            </div>
+            <div>
+                <label for="modeInput">モードを設定</label> <br>
+                <input type="radio" id="modeInput" name="mode" value="normal" checked>通常モード<br>
+                <input type="radio" id="modeInput" name="mode" value="timeattack">タイムアタックモード
+            </div>
+            <div>
+                <button id="startButton">スタート</button>
+            </div>
+        </div>
+    </div>
+    <div id="countdown" class="hidden">3</div>
+
+    <footer class="footer">
+        <a href="../index.html">トップページに戻る</a>
+    </footer>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
